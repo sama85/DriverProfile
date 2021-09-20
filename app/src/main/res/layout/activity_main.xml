@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/heading1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WE FOUND YOU A DRIVER"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="70dp"/>
+
+    <TextView
+        android:id="@+id/heading2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Driver will pickup you in 02:35"
+        app:layout_constraintTop_toBottomOf="@id/heading1"
+        app:layout_constraintStart_toStartOf="@id/heading1"
+        app:layout_constraintEnd_toEndOf="@id/heading1"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="#FF5722"
+        />
+
+    <ImageView
+        android:id="@+id/telephone_icon"
+        android:layout_width="67dp"
+        android:layout_height="59dp"
+
+        android:background="@drawable/circle"
+        android:padding="20dp"
+        android:src="@drawable/telephone_icon"
+        app:layout_constraintBottom_toBottomOf="@id/driver_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/driver_image"
+        app:layout_constraintTop_toTopOf="@id/driver_image"
+      />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/driver_image"
+        android:layout_width="120dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/driver_image"
+        app:layout_constraintStart_toEndOf="@id/telephone_icon"
+        app:layout_constraintTop_toBottomOf="@id/heading2"
+        app:layout_constraintEnd_toStartOf="@id/message_icon"
+        app:shapeAppearanceOverlay="@style/circular"
+
+        />
+
+    <ImageView
+        android:id="@+id/message_icon"
+        android:layout_width="67dp"
+        android:layout_height="59dp"
+        android:background="@drawable/circle"
+        android:padding="20dp"
+        android:src="@drawable/message_icon"
+        app:layout_constraintStart_toEndOf="@id/driver_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/driver_image"
+        app:layout_constraintBottom_toBottomOf="@id/driver_image"
+        />
+
+    <TextView
+        android:id="@+id/driver_image_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JUBERGO"
+        app:layout_constraintBottom_toBottomOf="@id/driver_image"
+        app:layout_constraintStart_toStartOf="@id/driver_image"
+        app:layout_constraintEnd_toEndOf="@id/driver_image"
+        android:textColor="@color/white"
+        android:background="@drawable/round_button"
+        android:padding="5dp"
+        />
+
+    <TextView
+        android:id="@+id/driver_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Connor Chavez"
+        app:layout_constraintTop_toBottomOf="@id/driver_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        />
+
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:stepSize="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        android:rating="4"
+        android:theme="@style/RatingBar"
+        app:layout_constraintTop_toBottomOf="@id/driver_image" />
+
+    <TextView
+        android:id="@+id/car_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ST3751"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.338"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rating_bar" />
+
+    <TextView
+        android:id="@+id/car_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" - Toyota Vios"
+        android:textSize="20sp"
+        android:textColor="#D78D8991"
+        app:layout_constraintStart_toEndOf="@id/car_text"
+        app:layout_constraintTop_toTopOf="@id/car_text"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
